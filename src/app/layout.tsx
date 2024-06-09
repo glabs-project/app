@@ -5,7 +5,6 @@ import './globals.css'
 import { BaseLayouts } from '~/widgets/layouts'
 
 import { cn } from '~/shared/lib/'
-import { WithReduxNextProvider } from '~/shared/providers'
 import { Toaster } from '~/shared/ui'
 
 const fontSans = FontSans({
@@ -31,10 +30,8 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <WithReduxNextProvider>
-          <BaseLayouts>{children}</BaseLayouts>
-          <Toaster />
-        </WithReduxNextProvider>
+        <BaseLayouts>{children}</BaseLayouts>
+        <Toaster />
       </body>
     </html>
   )

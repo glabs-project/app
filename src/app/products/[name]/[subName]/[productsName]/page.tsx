@@ -1,11 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
 
 import Image from 'next/image'
 
-import { useProducts } from '~/entities'
+import { GUITARS__MOCKS } from '~/shared/constants'
 import {
   Button,
   Carousel,
@@ -25,9 +24,7 @@ interface Props {
 export default function ProductsAsCategoryById({
   params: { subCategoryName, productsName }
 }: Props) {
-  const [{ id, title, image, colors, price }] = useSelector(useProducts).filter(
-    (item) => item.subCategory === subCategoryName && item.title === productsName
-  )
+  const [{ id, title, image, colors, price }] = GUITARS__MOCKS
 
   const [chooseColor, setChooseColor] = useState<string>('')
   const [showCharacteristics, setShowCharacteristics] = useState<boolean>(false)

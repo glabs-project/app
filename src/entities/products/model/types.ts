@@ -16,15 +16,17 @@ export type ProductsResponse = {
   category: string
   subCategories: { name: string; countItems: number }[]
   brands: string[]
-  products: {
-    [nameProducts: string]: {
-      name: string
-      price: string
-      type: string
-      characteristics: string[]
-      images: string[]
-    }[]
-  }
+  products: ProductsItems
+}
+
+export type ProductsItems = {
+  [nameProducts: string]: {
+    name: string
+    price: string
+    type: string
+    characteristics: string[]
+    images: string[]
+  }[]
 }
 
 export enum ProductsTitle {
