@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ProductsTitle } from '~/entities'
+import { ProductsTitle } from '~/entities/products'
 import { getAllProductsByName } from '~/entities/products/api'
 import { changeWordAsProducts } from '~/shared/lib'
 import {
@@ -34,7 +34,7 @@ export default async function ProductsByCategory({
           <div className="w-full my-4 mx-auto flex flex-row flex-wrap gap-2 sm:flex-row sm:gap-x-4">
             {products.brands.map((brand, index) => (
               <Link
-                href={`/products/${products.category}/${brand}`}
+                href={`/brands/${brand.toLowerCase()}`}
                 key={index}
                 className="p-2 bg-secondary rounded-lg hover:cursor-pointer"
               >

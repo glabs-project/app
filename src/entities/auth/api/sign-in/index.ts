@@ -21,6 +21,11 @@ export const signInAction = async (formData: FormData) => {
     .post(`auth/signin`, { json: user })
     .json<{ username: string; accessToken: string }>()
 
+  // Временная затычка
+  if (!response) {
+    redirect('/signin')
+  }
+
   cookies().set('session', JSON.stringify(response), {
     expires,
     httpOnly: true

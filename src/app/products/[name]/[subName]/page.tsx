@@ -1,4 +1,4 @@
-import { getAllProductsByName, ProductsCard } from '~/entities/products'
+import { getAllProductsByName, ProductsCard, ProductsTitle } from '~/entities/products'
 
 interface Props {
   params: {
@@ -13,9 +13,13 @@ export default async function ProductsSub({ params: { name, subName } }: Props) 
   const items = products[subName]
 
   return (
-    <div className="w-full flex flex-col sm:flex-row my-4">
-      <section className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:grid-cols-auto-fill md:grid-cols-minmax-min-10rem-full-1fr transition">
-        <ProductsCard products={items} />
+    <div className="flex flex-col my-4 gap-y-4">
+      <h1 className="font-bold text-xl">
+        {ProductsTitle[name as keyof typeof ProductsTitle]}
+      </h1>
+
+      <section className="w-full mx-auto flex flex-wrap gap-y-4 sm:flex-row sm:gap-x-4">
+        <ProductsCard name={name} subName={subName} products={items} />
       </section>
     </div>
   )

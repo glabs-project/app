@@ -31,12 +31,12 @@ export const Navbar = () => {
             </Link>
           )}
         </span>
-        <Link href={'/cart'}>
+        {/* <Link href={'/cart'}>
           <Button className="flex flex-row items-center gap-x-2">
             <ArchiveIcon width={26} height={26} />
             <span className="font-mono text-lg">0</span>
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </nav>
   )

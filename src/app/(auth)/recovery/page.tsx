@@ -1,4 +1,4 @@
-import { AuthRecoveryForm } from '~/entities'
+import { AuthRecoveryForm } from '~/entities/auth/ui/recovery'
 
 export default function AuthenticateRecovery() {
   return <AuthRecoveryForm />

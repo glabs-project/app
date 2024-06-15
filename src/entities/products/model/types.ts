@@ -32,7 +32,7 @@ export type ProductsItems = {
 export enum ProductsTitle {
   guitars = 'Гитары',
   strings = 'Струны для гитары',
-  amp = 'Усилители для гитары',
+  amps = 'Усилители для гитары',
   pedals = 'Педали и процессоры эффектов',
   cases = 'Чехлы и кейсы для гитар',
   accessories = 'Аксессуары для гитар',
@@ -63,4 +63,12 @@ export enum ProductsWord {
   'classicCase' = 'Чехлы для классических гитар',
   'acousticCase' = 'Чехлы для акустических гитар',
   'bassCase' = 'Чехлы для бас-гитар',
+  'beltAccessories' = 'Гитарные ремни',
+  'tunerAccessories' = 'Тюнеры и метрономы',
+  'capodasterAccessories' = 'Каподастры',
+  'deskAccessories' = 'Стойки и держатели для гитар',
+  'careProductAccessories' = 'Средства по уходу за инструментами',
+  'jackCabelSwitching' = 'Инструментальные кабели',
+  'patchCabelSwitching' = 'Патч-кабели',
+  'adapterSwitching' = 'Переходники',
 }

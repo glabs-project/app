@@ -11,7 +11,8 @@ export const signUpAction = async (formData: FormData) => {
     email: formData.get('email'),
     password: formData.get('password'),
     rpassword: formData.get('rpassword'),
-    roles: ['user']
+    roles: [],
+    phoneNumber: "+7000000000"
   }
 
   const expires = new Date(new Date().getTime() + 2 * 60 * 1000)

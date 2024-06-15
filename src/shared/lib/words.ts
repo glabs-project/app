@@ -1,4 +1,4 @@
-import { ProductsWord } from '~/entities'
+import { ProductsWord } from '~/entities/products'
 
 export const changeWordAsProducts = (word: string) => {
   return ProductsWord[word as keyof typeof ProductsWord]

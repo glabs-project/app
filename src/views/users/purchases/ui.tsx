@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const UserPurchases = () => {
   return (
-    <div className="flex flex-col gap-y-2 ">
+    <div className="flex flex-col gap-y-2">
       <div className="flex flex-row justify-between container py-6 border border-black rounded-md">
         <div className="flex flex-col items-start">
           <div className="flex flex-row items-center gap-x-1">
